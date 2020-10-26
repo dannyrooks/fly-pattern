@@ -5,10 +5,16 @@ import { fetchPatterns } from '../actions/fetchPatterns'
 class PatternsContainer extends React.Component {
 
     render() {
+        const patterns = this.props.patterns.map((pattern, index) => <li key={index}>{pattern.name} </li>)
 
         return (
             <div>
-                
+                <h1>
+                  Fly Pattern App
+                </h1>
+                <ul>
+                  {this.props.loading ? <h3>Loading.....</h3> : patterns}
+                </ul>
             </div>
         )
     }
