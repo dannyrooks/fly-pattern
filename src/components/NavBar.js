@@ -15,9 +15,9 @@ class NavBar extends React.Component {
             <div>
                 <NavLink to="/" exact style={ linkStyle }>Home</NavLink>
 
-                <NavLink to="/patterns" exact style={ linkStyle }>Add New Pattern</NavLink>
+                <NavLink to="/patterns" exact style={ linkStyle }>All Patterns</NavLink>
                 
-                <NavLink></NavLink>
+                <NavLink to="/patterns/new" exact style={ linkStyle }>Input Pattern</NavLink>
             </div>
         )
     }

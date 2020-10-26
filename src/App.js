@@ -1,10 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { fetchPatterns } from './actions/fetchPatterns'
-import PatternsContainer from './containers/patternsContainer'
+import PatternsContainer from './containers/PatternsContainer'
 import PatternInput from './components/PatternInput'
+import Home from './components/Home'
+import NavBar from './components/NavBar'
 import { Route, Switch } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
+
 
 class App extends React.Component {
 
@@ -21,6 +24,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/patterns' component={PatternsContainer} />
+          <Route exact path='/patterns/new' component={PatternInput} />
         </Switch>
         </Router>
       </div>
