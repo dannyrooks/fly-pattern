@@ -1,19 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { fetchPatterns} from './actions/fetchPatterns'
 
 
 class App extends React.Component {
 
   componentDidMount() {
-    fetch('http://localhost:3000/patterns', {
-      method: 'GET'
-    })
-    .then(res => res.json())
-    .then(data => console.log(data))
+    this.props.fetchPatterns()
+    
   }
 
   render(){
-  const patterns = this.props.patterns.map((pattern, index) => <li key={index}>{pattern.comment} </li>)
+  const patterns = this.props.patterns.map((pattern, index) => <li key={index}>{pattern.name} </li>)
     return (
       <div className="App">
         <h1>
@@ -34,4 +32,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, { fetchPatterns })(App);
