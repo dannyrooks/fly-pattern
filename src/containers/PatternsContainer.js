@@ -10,7 +10,7 @@ class PatternsContainer extends React.Component {
         return (
             <div>
                 <h1>
-                  Fly Pattern App
+                  Fly Patterns
                 </h1>
                 <ul>
                   {this.props.loading ? <h3>Loading.....</h3> : patterns}

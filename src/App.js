@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import { fetchPatterns } from './actions/fetchPatterns'
 import PatternsContainer from './containers/patternsContainer'
 import PatternInput from './components/PatternInput'
-
+import { Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 class App extends React.Component {
 
@@ -13,19 +14,19 @@ class App extends React.Component {
   }
 
   render(){
-  const patterns = this.props.patterns.map((pattern, index) => <li key={index}>{pattern.name} </li>)
     return (
       <div className="App">
-        <h1>
-          Fly Pattern App
-        </h1>
-        <ul>
-          {this.props.loading ? <h3>Loading.....</h3> : patterns}
-        </ul>
+        <Router>
+        <NavBar></NavBar>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/patterns' component={PatternsContainer} />
+        </Switch>
+        </Router>
       </div>
     );
   }
 }
 
 
-export default connect(mapStateToProps, { fetchPatterns })(App);
+export default connect(null, { fetchPatterns })(App);
