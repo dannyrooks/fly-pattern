@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { fetchPatterns} from './actions/fetchPatterns'
+import { fetchPatterns } from './actions/fetchPatterns'
+import PatternsContainer from './containers/patternsContainer'
+import PatternInput from './components/PatternInput'
 
 
 class App extends React.Component {
@@ -25,11 +27,5 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    patterns: state.patternReducer.patterns,
-    loading: state.patternReducer.loading
-  }
-}
 
 export default connect(mapStateToProps, { fetchPatterns })(App);
