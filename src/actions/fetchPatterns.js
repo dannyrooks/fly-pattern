@@ -21,5 +21,6 @@ export const addPattern = (pattern) => {
         })
     }
 }
+//add error messaging?
 
 
