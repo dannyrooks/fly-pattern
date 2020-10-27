@@ -2,7 +2,7 @@
 
 export const fetchPatterns = () => {
     return (dispatch) => {
-        dispatch({type: "LOADING_PATTERNS"})
+        dispatch({type: "LOADING_SAVED_PATTERNS"})
         return fetch('/patterns')
         .then(res => res.json())
         .then(data => dispatch({type: "PATTERNS_LOADED", payload: data}))
@@ -11,16 +11,17 @@ export const fetchPatterns = () => {
 
 export const addPattern = (pattern) => {
     return (dispatch) => {
-        dispatch({ type: "ADD_PATTERN"}, pattern)
-        return fetch('/patterns', {
+        dispatch({ type: "ADD_PATTERN"})
+        fetch('/patterns', {
             method: "POST",
             body: JSON.stringify(pattern),
             headers: {
-                'Content-Type': 'application'
+                'Content-Type': 'application/json'
             }
         })
+        .then(res => res.json())
+        .then(pattern => dispatch({ type: "PATTERN_ADDED", payload: pattern}))
     }
 }
-//add error messaging?
 
 

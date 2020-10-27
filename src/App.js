@@ -25,6 +25,7 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route exact path='/patterns' component={PatternsContainer} />
           <Route exact path='/patterns/new' component={PatternInput} />
+          {/* <Route exact path= '/patterns/:id/materials' component={PatternsContainer} /> */}
         </Switch>
         </Router>
       </div>

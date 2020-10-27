@@ -5,7 +5,7 @@
 export default (state = { patterns: [], loading: false }, action) => {
 
     switch(action.type) {
-        case "LOADING_PATTERNS":
+        case "LOADING_SAVED_PATTERNS":
             return {
                 ...state,
                 loading: true

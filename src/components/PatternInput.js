@@ -18,9 +18,11 @@ class PatternInput extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.props.addPattern(this.state)
+        const pattern = {name: this.state.name}
+        this.props.addPattern(pattern)
         this.setState({
-            name: ""
+            name: "",
+            loading: false
         })
     }
 
@@ -30,14 +32,13 @@ class PatternInput extends React.Component {
                 <h2>Create New Pattern</h2>
                 <form onSubmit={this.handleSubmit}>
                     <input
-                        name="name"
                         type="text"
                         value={this.state.name}
                         onChange={this.handleOnChange}
                     />
-                    <button type="submit">Add Pattern</button>
+                    <input type="submit" />
                 </form>
-                <PatternsContainer />
+                {/* <PatternsContainer /> */}
             </div>
         )
     }
