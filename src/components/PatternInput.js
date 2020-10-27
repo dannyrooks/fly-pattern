@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addPattern } from '../actions/fetchPatterns'
-import PatternsContainer from '../containers/PatternsContainer'
+// import PatternsContainer from '../containers/PatternsContainer'
 
 class PatternInput extends React.Component {
 
