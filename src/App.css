@@ -73,41 +73,29 @@ header {
   justify-content: center;
 }
 
-.main-beach-info {
+.main-pattern-info {
   background-color: palevioletred;
   color: seashell; /* A fitting color for a Beach Journal, eh? */
   padding-top: 1%;
   padding-bottom: 1%;
 }
 
-.beach-info-labels {
+.pattern-info-labels {
   color: yellow;
 }
 
-.attraction-info {
+.pattern-info {
   background-color: cornflowerblue;
   padding-top: 1%;
   padding-bottom: 1%;
 }
 
-.attraction-info h3, .attraction-info p {
-  color: rgb(165, 28, 28);
-}
-
-.attraction-info strong {
-  color: greenyellow;
-}
-
-.App-description, .journal-entry-form, .beach-card {
+.App-description, .pattern-form, .pattern-card {
   background-color: rgb(184, 20, 20);
   padding-top: 1%;
   padding-bottom: 1%;
 }
 
-.journal-entry {
-  background-color: rgb(134, 134, 40);
-  padding: 1%;
-}
 
 /* .App-logo {
   height: 40vmin;
