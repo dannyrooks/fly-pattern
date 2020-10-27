@@ -1,18 +1,24 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addPattern } from '../actions/fetchPatterns'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 // import PatternsContainer from '../containers/PatternsContainer'
 
 class PatternInput extends React.Component {
 
     state = {
         name: "",
+        category: "",
+        comment: "",
         loading: false
     }
 
     handleOnChange = event => {
         this.setState({
-            name: event.target.value
+            name: event.target.value,
+            category: event.target.value,
+            comment: event.target.value
         })
     }
 
@@ -22,6 +28,8 @@ class PatternInput extends React.Component {
         this.props.addPattern(pattern)
         this.setState({
             name: "",
+            category: "",
+            comment: "",
             loading: false
         })
     }
@@ -30,14 +38,32 @@ class PatternInput extends React.Component {
         return (
             <div>
                 <h2>Create New Pattern</h2>
-                <form onSubmit={this.handleSubmit}>
+                <Form onSubmit={this.handleSubmit}>
+                    Name:
                     <input
+                        as="textarea"
+                        name="name"
                         type="text"
                         value={this.state.name}
                         onChange={this.handleOnChange}
                     />
-                    <input type="submit" />
-                </form>
+                    <br />
+                    Category:
+                    <input 
+                        type="text"
+                        value={this.state.category}
+                        onChange={this.handleOnChange}
+                    />
+                    <br />
+                    Comment:
+                    <input  
+                        type="text"
+                        value={this.state.comment}
+                        onChange={this.handleOnChange}
+                    /><br />
+
+                    <Button type="submit">Create Pattern</Button>
+                </Form>
                 {/* <PatternsContainer /> */}
             </div>
         )

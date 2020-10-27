@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,111 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+body {
+  background-color: #3bac7dc4;
 }
+
+.App {
+  text-align: center;
+}
+
+nav {
+  margin: 2%;
+  padding: 0 25%;
+}
+
+.App section {
+  margin: 1% 5% 2%;
+  padding: 1%;
+  background-color: #1a95d3;
+}
+
+.custom-caption {
+  color: black;
+}
+
+header {
+  position: relative;
+}
+
+.app-name p {
+  margin-bottom: 0;
+}
+
+.center-justify-content {
+  display: flex;
+  justify-content: center;
+}
+
+.main-beach-info {
+  background-color: palevioletred;
+  color: seashell; /* A fitting color for a Beach Journal, eh? */
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.beach-info-labels {
+  color: yellow;
+}
+
+.attraction-info {
+  background-color: cornflowerblue;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.attraction-info h3, .attraction-info p {
+  color: rgb(165, 28, 28);
+}
+
+.attraction-info strong {
+  color: greenyellow;
+}
+
+.App-description, .journal-entry-form, .beach-card {
+  background-color: rgb(184, 20, 20);
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.journal-entry {
+  background-color: rgb(134, 134, 40);
+  padding: 1%;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+/* @keyframes App-logo-spin { (I might want to use something like this to animate a beach ball.)
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.required-field { color: red; }
+.success-message, .secondary-labels { color: green }
+.button-names, .tertiary-labels { color: brown }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 import { connect } from 'react-redux'
 import { fetchPatterns } from './actions/fetchPatterns'
 import PatternsContainer from './containers/PatternsContainer'

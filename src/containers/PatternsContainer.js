@@ -7,7 +7,8 @@ import PatternInput from '../components/PatternInput'
 class PatternsContainer extends React.Component {
 
     render() {
-        const patterns = this.props.patterns.map((pattern, index) => <li key={index}>{pattern.name} </li>)
+        const patterns = this.props.patterns.map((pattern, index) => 
+        <li key={index}>{pattern.name} | {pattern.category} | {pattern.comment} </li>)
 
         return (
             <div>
@@ -15,10 +16,11 @@ class PatternsContainer extends React.Component {
                   Fly Patterns
                 </h1>
                 <PatternInput />
-                <ul>
+                <br />
+                <li>
                   {this.props.loading ? <h3>Loading.....</h3> : patterns }
                   
-                </ul>
+                </li>
             </div>
         )
     }
