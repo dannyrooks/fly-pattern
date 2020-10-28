@@ -22,10 +22,10 @@ class PatternsContainer extends React.Component {
                 </h1>
                 <PatternInput />
                 <br />
-                <li>
+                <div>
                   {this.props.loading ? <h3>Loading.....</h3> : patterns }
                   
-                </li>
+                </div>
             </div>
         )
     }
