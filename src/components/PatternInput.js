@@ -71,6 +71,8 @@ class PatternInput extends React.Component {
 }
 
 
+
+
 export default connect(null, { addPattern })(PatternInput)
 
 
