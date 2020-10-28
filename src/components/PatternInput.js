@@ -18,7 +18,7 @@ class PatternInput extends React.Component {
         this.setState({
             name: event.target.value,
             category: event.target.value,
-            comment: event.target.value
+            // comment: event.target.value
         })
     }
 

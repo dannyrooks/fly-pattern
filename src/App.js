@@ -7,7 +7,8 @@ import PatternInput from './components/PatternInput'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
 import { Route, Switch } from 'react-router-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
+// import FigureImage from 'react-bootstrap/FigureImage'
+// import FigureCaption from 'react-bootstrap/FigureCaption';
 
 
 class App extends React.Component {
@@ -20,7 +21,6 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <Router>
         <NavBar></NavBar>
         <Switch>
           <Route exact path='/' component={Home} />
@@ -28,7 +28,6 @@ class App extends React.Component {
           <Route exact path='/patterns/new' component={PatternInput} />
           {/* <Route exact path= '/patterns/:id/materials' component={PatternsContainer} /> */}
         </Switch>
-        </Router>
       </div>
     );
   }
