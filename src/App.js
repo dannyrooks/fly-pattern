@@ -34,4 +34,8 @@ class App extends React.Component {
 }
 
 
-export default connect(null, { fetchPatterns })(App);
+const mapDispatchToProps = dispatch => ({
+  fetchPatterns: () => dispatch( fetchPatterns() )
+});
+
+export default connect(null, mapDispatchToProps)(App);
