@@ -15,9 +15,10 @@ class PatternInput extends React.Component {
     }
 
     handleOnChange = event => {
+        console.log("trigger handle change")
         this.setState({
             name: event.target.value,
-            category: event.target.value,
+            // category: event.target.value,
             // comment: event.target.value
         })
     }
