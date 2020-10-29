@@ -5,7 +5,7 @@ const linkStyle = {
     width: '100px',
     padding: '12px',
     margin: '0 6px 6px',
-    background: 'grey',
+    background: 'blue',
     color: 'white'
 }
 
@@ -15,9 +15,9 @@ class NavBar extends React.Component {
             <div>
                 <NavLink to="/" exact style={ linkStyle }>Home</NavLink>
 
-                <NavLink to="/patterns" exact style={ linkStyle }>All Patterns</NavLink>
+                <NavLink to="/patterns" exact style={ linkStyle }>Add New Pattern</NavLink>
                 
-                <NavLink to="/patterns/new" exact style={ linkStyle }>Input Pattern</NavLink>
+                <NavLink to="/patterns/new" exact style={ linkStyle }>Add New Pattern</NavLink>
             </div>
         )
     }
