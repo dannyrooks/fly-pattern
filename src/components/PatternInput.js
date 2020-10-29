@@ -42,7 +42,7 @@ class PatternInput extends React.Component {
                 <Form onSubmit={this.handleSubmit}>
                     Name:
                     <input
-                        as="textarea"
+                        placeholder="name"
                         name="name"
                         type="text"
                         value={this.state.name}
@@ -51,6 +51,8 @@ class PatternInput extends React.Component {
                     <br />
                     Category:
                     <input 
+                        placeholder="category"
+                        name="category"
                         type="text"
                         value={this.state.category}
                         onChange={this.handleOnChange}
@@ -58,6 +60,8 @@ class PatternInput extends React.Component {
                     <br />
                     Comment:
                     <input  
+                        placeholder="comment"
+                        name="comment"
                         type="text"
                         value={this.state.comment}
                         onChange={this.handleOnChange}
