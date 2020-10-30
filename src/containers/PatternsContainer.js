@@ -33,8 +33,8 @@ class PatternsContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-      patterns: state.patternReducer.patterns,
-      loading: state.patternReducer.loading
+      patterns: state.PatternReducer.patterns,
+      loading: state.PatternReducer.loading
     }
   }
 
