@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import patternReducer from './reducers/patternReducer'
+import PatternForm from './components/PatternForm'
 // import materialReducer from './reducers/materialReducer'
 import thunk from 'redux-thunk';
 
