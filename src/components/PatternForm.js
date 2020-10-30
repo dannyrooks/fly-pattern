@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 // import PatternsContainer from '../containers/PatternsContainer'
 
-class PatternInput extends React.Component {
+class PatternForm extends React.Component {
 
     state = {
         name: "",
@@ -78,8 +78,4 @@ class PatternInput extends React.Component {
 
 
 
-export default connect(null, { addPattern })(PatternInput)
-
-
-
-
+export default connect(null, { addPattern })(PatternForm)

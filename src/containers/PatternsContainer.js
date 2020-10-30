@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { fetchPatterns } from '../actions/fetchPatterns'
-import PatternInput from '../components/PatternInput'
+import PatternForm from '../components/PatternForm'
 import '../App.css';
 // import { Switch, Route } from 'react-router-dom'
 // import Container from 'react-bootstrap/Container';
@@ -20,7 +20,7 @@ class PatternsContainer extends React.Component {
                 <h1>
                   Fly Patterns
                 </h1>
-                <PatternInput />
+                <PatternForm />
                 <br />
                 <div>
                   {this.props.loading ? <h3>Loading.....</h3> : patterns }
