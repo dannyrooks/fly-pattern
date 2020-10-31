@@ -14,13 +14,10 @@ class PatternForm extends React.Component {
         loading: false
     }
 
-    handleOnChange = event => {
-        console.log("trigger handle change")
-        this.setState({
-            name: event.target.value,
-            // category: event.target.value,
-            // comment: event.target.value
-        })
+    handleChange = event => {
+        event.preventDefault()
+        const { name, value } = event.target
+        
     }
 
     handleSubmit = event => {
@@ -46,7 +43,7 @@ class PatternForm extends React.Component {
                         name="name"
                         type="text"
                         value={this.state.name}
-                        onChange={this.handleOnChange}
+                        onChange={this.handleChange}
                     />
                     <br />
                     Category:
@@ -55,7 +52,7 @@ class PatternForm extends React.Component {
                         name="category"
                         type="text"
                         value={this.state.category}
-                        onChange={this.handleOnChange}
+                        onChange={this.handleChange}
                     />
                     <br />
                     Comment:
@@ -64,7 +61,7 @@ class PatternForm extends React.Component {
                         name="comment"
                         type="text"
                         value={this.state.comment}
-                        onChange={this.handleOnChange}
+                        onChange={this.handleChange}
                     /><br />
 
                     <Button type="submit">Create Pattern</Button>
