@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import { connect } from 'react-redux'
 import { fetchPatterns } from './actions/fetchPatterns'
+import { updatePatternForm } from './ actions/fetchPatterns'
 import PatternsContainer from './containers/PatternsContainer'
 import Patterns from './components/Patterns'
 import PatternForm from './components/PatternForm'
@@ -36,7 +37,8 @@ class App extends React.Component {
 
 
 const mapDispatchToProps = dispatch => ({
-  fetchPatterns: () => dispatch( fetchPatterns() )
+  fetchPatterns: () => dispatch( fetchPatterns() ),
+  updatePatternForm: () => dispatch( updatePatternForm() )
 });
 
 export default connect(null, mapDispatchToProps)(App);

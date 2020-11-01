@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addPattern } from '../actions/fetchPatterns'
+import { updatePatternForm } from '../actions/fetchPatterns'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import { updatePatternForm } from '../actions/fetchPatterns'
 // import PatternsContainer from '../containers/PatternsContainer'
 
 class PatternForm extends React.Component {
@@ -76,4 +76,4 @@ class PatternForm extends React.Component {
 
 
 
-export default connect(null, { addPattern })(PatternForm)
+export default connect(null, { addPattern }, { updatePatternForm })(PatternForm)

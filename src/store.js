@@ -1,13 +1,13 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import PatternReducer from './reducers/PatternReducer'
-import PatternForm from './components/PatternForm'
+import PatternFormReducer from './reducers/PatternFormReducer'
 import Patterns from './components/Patterns'
 // import materialReducer from './reducers/materialReducer'
 import thunk from 'redux-thunk';
 
 const reducer = combineReducers({
     PatternReducer,
-    PatternForm
+    PatternFormReducer
     // materialReducer
 })
 
