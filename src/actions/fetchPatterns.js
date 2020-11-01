@@ -24,7 +24,7 @@ export const addPattern = (pattern) => {
     }
 }
 
-export const patternForm = (name, value) => {
+export const updatePatternForm = (name, value) => {
     console.log("FORM ACTION FIRED!!")
     return {
         type: "UPDATE_PATTERN_FORM",
