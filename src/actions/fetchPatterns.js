@@ -26,10 +26,13 @@ export const addPattern = (pattern) => {
 
 export const updatePatternForm = (name, value) => {
     console.log("FORM ACTION FIRED!!")
+    const formData = { name, value }
     return {
         type: "UPDATE_PATTERN_FORM",
-        formData: { name, value }
+        formData
     }
 }
+
+
 
 
