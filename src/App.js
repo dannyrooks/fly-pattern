@@ -9,7 +9,6 @@ import PatternForm from './components/PatternForm'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
 import { Route, Switch } from 'react-router-dom'
-
 // import FigureImage from 'react-bootstrap/FigureImage'
 // import FigureCaption from 'react-bootstrap/FigureCaption';
 
