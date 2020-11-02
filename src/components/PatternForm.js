@@ -7,43 +7,54 @@ import Button from 'react-bootstrap/Button'
 // import PatternsContainer from '../containers/PatternsContainer'
 
 class PatternForm extends React.Component {
-
+// const PatternForm = ({ formData, updatePatternForm, handleSubmit, editMode }) => {
+    // const { name, category, comment } = formData
     state = {
-        name: "",
-        category: "",
-        comment: "",
-        loading: false
-    }
-
-    handleChange = event => {
-        event.preventDefault()
-        const { name, value } = event.target
-        updatePatternForm(name, value)
-    }
-
-    handleSubmit = event => {
-        event.preventDefault()
-        const pattern = {name: this.state.name}
-        this.props.addPattern(pattern)
-        this.setState({
             name: "",
             category: "",
             comment: "",
             loading: false
+        }
+
+
+    // const handleChange = event => {
+    //     console.log("trigger handleChange")
+    //     const { name, value } = event.target
+    //     updatePatternForm(name, value)
+    // }
+
+    
+
+    handleChange = event => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
+    handleSubmit = event => {
+        event.preventDefault()
+        const { name, category, comment } = this.state
+        // this.props.addPattern(pattern)
+        this.props.addPattern(this.state)
+        this.setState({
+            name: "",
+            category: "",
+            comment: "",
+            // redirect: true
         })
     }
 
     render() {
         return (
-            <div>
-                <h2>Create New Pattern</h2>
+            
+                // <h2>Create New Pattern</h2>
                 <Form onSubmit={this.handleSubmit}>
                     Name:
                     <input
                         placeholder="name"
                         name="name"
                         type="text"
-                        value={this.state.name}
+                        value={this.name}
                         onChange={this.handleChange}
                     />
                     <br />
@@ -51,8 +62,7 @@ class PatternForm extends React.Component {
                     <input 
                         placeholder="category"
                         name="category"
-                        type="text"
-                        value={this.state.category}
+                        value={this.category}
                         onChange={this.handleChange}
                     />
                     <br />
@@ -60,20 +70,21 @@ class PatternForm extends React.Component {
                     <input  
                         placeholder="comment"
                         name="comment"
-                        type="text"
-                        value={this.state.comment}
+                        value={this.comment}
                         onChange={this.handleChange}
                     /><br />
-
                     <Button type="submit">Create Pattern</Button>
                 </Form>
-                {/* <PatternsContainer /> */}
-            </div>
+            
         )
     }
 }
 
+const mapDispatchToProps = dispatch => ({
+    addPattern: patternData => dispatch(addPattern(patternData))
+})
 
 
 
-export default connect(null, { addPattern, updatePatternForm })(PatternForm)
+
+export default connect(null, { mapDispatchToProps, addPattern, updatePatternForm })(PatternForm)
