@@ -8,8 +8,8 @@ import PatternFormReducer from './reducers/PatternFormReducer'
 
 const reducer = combineReducers({
     PatternReducer,
-    PatternFormReducer,
-    // materialReducer
+    PatternFormReducer
+    // materialReducer,
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
