@@ -76,4 +76,4 @@ class PatternForm extends React.Component {
 
 
 
-export default connect(null, { addPattern }, { updatePatternForm })(PatternForm)
+export default connect(null, { addPattern, updatePatternForm })(PatternForm)
