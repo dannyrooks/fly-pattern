@@ -33,7 +33,7 @@ class PatternForm extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        const { name, category, comment } = this.state
+        // const { name, category, comment } = this.state
         // this.props.addPattern(pattern)
         this.props.addPattern(this.state)
         this.setState({
