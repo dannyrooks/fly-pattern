@@ -47,8 +47,10 @@ class PatternForm extends React.Component {
     render() {
         return (
             
-                // <h2>Create New Pattern</h2>
                 <Form onSubmit={this.handleSubmit}>
+                <br />
+                 <h2>Create New Pattern</h2>
+
                     Name:
                     <input
                         placeholder="name"
