@@ -75,7 +75,8 @@ class PatternForm extends React.Component {
                         value={this.comment}
                         onChange={this.handleChange}
                     /><br />
-                    <Button type="submit">Create Pattern</Button>
+                    
+                    <Button type="submit" >Create Pattern</Button>
                 </Form>
             
         )
