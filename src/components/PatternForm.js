@@ -16,14 +16,11 @@ class PatternForm extends React.Component {
             loading: false
         }
 
-
     // const handleChange = event => {
     //     console.log("trigger handleChange")
     //     const { name, value } = event.target
     //     updatePatternForm(name, value)
     // }
-
-    
 
     handleChange = event => {
         this.setState({
@@ -86,8 +83,6 @@ class PatternForm extends React.Component {
 const mapDispatchToProps = dispatch => ({
     addPattern: patternData => dispatch(addPattern(patternData))
 })
-
-
 
 
 export default connect(null, { mapDispatchToProps, addPattern, updatePatternForm })(PatternForm)
