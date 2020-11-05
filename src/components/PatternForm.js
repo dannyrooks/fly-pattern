@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addPattern } from '../actions/fetchPatterns'
 import { updatePatternForm } from '../actions/fetchPatterns'
+import { Redirect } from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 // import PatternsContainer from '../containers/PatternsContainer'
@@ -37,17 +38,23 @@ class PatternForm extends React.Component {
             name: "",
             category: "",
             comment: "",
-            // redirect: true
+            redirect: true
         })
+    }
+
+    patternRedirect = () => {
+        if (this.state.redirect) {
+            return(
+                <Redirect to={{pathname: '/patterns', state: {successMessage: "Pattern Created!"}}} />
+            )
+        }
     }
 
     render() {
         return (
-            
                 <Form onSubmit={this.handleSubmit}>
                 <br />
                  <h2>Create New Pattern</h2>
-
                     Name:
                     <input
                         placeholder="name"
@@ -72,8 +79,8 @@ class PatternForm extends React.Component {
                         value={this.comment}
                         onChange={this.handleChange}
                     /><br />
-                    
                     <Button type="submit" >Create Pattern</Button>
+                    {this.patternRedirect()}
                 </Form>
         )
     }
