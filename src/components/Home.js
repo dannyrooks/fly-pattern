@@ -1,13 +1,12 @@
 import React from 'react'
 import '../App.css'
+import Image from 'react-bootstrap/Image'
 // import '../index.css'
 
 function Home() {
     
     return (
-        <div className="image" src="https://www.flyshack.com/Images/Items/Wulff_Royal.JPG">
-            <h1>Home</h1>
-        </div>
+        <Image className="image" src="https://www.tridentflyfishing.com/media/catalog/product/cache/972702a044b6fe55ba6d834a75577b47/_/u/_umpqua_wulff_royal_1_42.jpg" fluid />
     )
 }
 
