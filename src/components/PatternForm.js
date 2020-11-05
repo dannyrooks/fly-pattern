@@ -75,7 +75,6 @@ class PatternForm extends React.Component {
                     
                     <Button type="submit" >Create Pattern</Button>
                 </Form>
-            
         )
     }
 }
