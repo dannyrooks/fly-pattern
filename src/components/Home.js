@@ -1,10 +1,11 @@
 import React from 'react'
 import '../App.css'
+// import '../index.css'
 
-const Home = () => {
+function Home() {
+    
     return (
-        <div>
-            
+        <div className="image" src="https://www.flyshack.com/Images/Items/Wulff_Royal.JPG">
             <h1>Home</h1>
         </div>
     )
