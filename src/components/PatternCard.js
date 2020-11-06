@@ -1,10 +1,17 @@
-import react from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-// import { connect } from 'react-redux'
-// import PatternCard from './PatternCard'
 
-const MyPatterns = props => {
-    const patternCards = props.trips.map(p => <PatternCard)
+const PatternCard = ({ pattern }) => {
+    return (
+        pattern ?
+        <div>
+            <h3>{pattern.attributes.name}</h3>
+            <p>{pattern.attributes.category}</p>
+            <p>{pattern.attributes.comment}</p>
+            <Link to={`/patterns/${pattern.id}/edit`}>Edit pattern</Link>
+        </div> :
+        <p>This card has no pattern</p>
+    )
 }
 
 
