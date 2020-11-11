@@ -35,7 +35,7 @@
 
 .custom-caption {
   color: black;
-}
+} 
 
 header {
   position: relative;
@@ -52,7 +52,7 @@ header {
 
 .main-pattern-info {
   background-color: palevioletred;
-  color: seashell; 
+  color: white; 
   padding-top: 1%;
   padding-bottom: 1%;
 }

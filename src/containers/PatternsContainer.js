@@ -4,7 +4,7 @@ import { fetchPatterns } from '../actions/fetchPatterns'
 // import PatternForm from '../components/PatternForm'
 import '../App.css';
 // import { Switch, Route } from 'react-router-dom'
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 // import Pattern from '../components/Pattern'
 // import PatternCard from '../components/pattern/PatternCard';
 
@@ -14,8 +14,8 @@ class PatternsContainer extends React.Component {
     render() {
         const patterns = this.props.patterns.map((pattern, index) => 
         <p key={index}>
-          {pattern.name}
-            <strong>{pattern.category} | {pattern.comment} </strong>
+          {pattern.name} |
+            <strong> {pattern.category} | {pattern.comment} </strong>
             </p>)
 
         return (

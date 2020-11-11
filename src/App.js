@@ -35,7 +35,6 @@ class App extends React.Component {
   }
 }
 
-
 const mapDispatchToProps = dispatch => ({
   fetchPatterns: () => dispatch( fetchPatterns() ),
   updatePatternForm: () => dispatch( updatePatternForm() )
