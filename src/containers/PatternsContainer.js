@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { fetchPatterns } from '../actions/fetchPatterns'
+import { Link } from 'react-router-dom'
 // import PatternForm from '../components/PatternForm'
 import '../App.css';
 // import { Switch, Route } from 'react-router-dom'
@@ -14,8 +15,8 @@ class PatternsContainer extends React.Component {
     render() {
         const patterns = this.props.patterns.map((pattern, index) => 
         <p key={index}>
-          {pattern.name} |
-            <strong> {pattern.category} | {pattern.comment} </strong>
+          <strong><Link>{pattern.name}</Link></strong> | 
+            {pattern.category} | {pattern.comment}
             </p>)
 
         return (

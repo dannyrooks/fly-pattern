@@ -2,14 +2,14 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk'
 import PatternReducer from './reducers/PatternReducer'
 import PatternFormReducer from './reducers/PatternFormReducer'
-import MaterialReducer from './reducers/MaterialReducer'
+// import MaterialReducer from './reducers/MaterialReducer'
 
 
 
 const reducer = combineReducers({
     PatternReducer,
     PatternFormReducer,
-    MaterialReducer
+    // MaterialReducer
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
