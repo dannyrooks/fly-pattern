@@ -23,7 +23,7 @@ class PatternsContainer extends React.Component {
                 <h1>
                   Fly Patterns
                 </h1>
-                {/* <PatternForm /> */}
+                {/* <PatternCard /> */}
                 <br />
                 <div>
                   {this.props.loading ? <h3>Loading.....</h3> : patterns }
