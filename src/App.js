@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 import { fetchPatterns } from './actions/fetchPatterns'
 import { updatePatternForm } from './actions/fetchPatterns'
 import PatternsContainer from './containers/PatternsContainer'
-import Pattern from './components/Pattern'
-// import Patterns from './components/Patterns'
+import MaterialsContainer from './containers/MaterialsContainer'
+import PatternCard from './components/PatternCard'
 import PatternForm from './components/PatternForm'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
@@ -29,7 +29,7 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route exact path='/patterns' component={PatternsContainer} />
           <Route exact path='/patterns/new' component={PatternForm} />
-          <Route exact path='/patterns/pattern_id/materials/id' component={Pattern} />
+          <Route exact path='/patterns/:id/materials' component={MaterialsContainer} />
           {/* <Route exact path='/patterns/:id/materials' component={PatternsContainer} /> */}
         </Switch>
       </div>

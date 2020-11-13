@@ -6,23 +6,15 @@ import { Redirect } from 'react-router-dom'
 import '../App.css'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-// import PatternsContainer from '../containers/PatternsContainer'
 
 class PatternForm extends React.Component {
-// const PatternForm = ({ formData, updatePatternForm, handleSubmit, editMode }) => {
-    // const { name, category, comment } = formData
+
     state = {
             name: "",
             category: "",
             comment: "",
             loading: false
         }
-
-    // const handleChange = event => {
-    //     console.log("trigger handleChange")
-    //     const { name, value } = event.target
-    //     updatePatternForm(name, value)
-    // }
 
     handleChange = event => {
         this.setState({

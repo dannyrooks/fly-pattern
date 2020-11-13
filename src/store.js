@@ -4,7 +4,6 @@ import PatternReducer from './reducers/PatternReducer'
 import PatternFormReducer from './reducers/PatternFormReducer'
 
 
-
 const reducer = combineReducers({
     PatternReducer,
     PatternFormReducer

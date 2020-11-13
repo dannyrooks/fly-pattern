@@ -15,7 +15,7 @@ class PatternsContainer extends React.Component {
     render() {
         const patterns = this.props.patterns.map((pattern, index) => 
         <p key={index}>
-          <strong><Link>{pattern.name}</Link></strong> | 
+          <Link to={{pathname: `/pattern/${index}/materials`}}>{pattern.name}</Link> | 
             {pattern.category} | {pattern.comment}
             </p>)
 
