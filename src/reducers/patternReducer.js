@@ -31,6 +31,24 @@ export default (state = { patterns: [], loading: false }, action) => {
                 loading: false
             }
 
+        case "ADD_MATERIAL":
+            return {
+                ...state,
+                loading: true
+            }    
+
+        case "MATERIAL_ADDED":
+            let pattern = state.patterns.filter(pat => pat.id === action.payload.pattern_id)[0]
+            let newPat = {
+                ...pattern,
+                materials: [...pattern.materials, action.payload]}
+            let patterns = state.patterns.filter(p => p.id !== action.payload.pattern_id)
+            return {
+                ...state,
+                patterns: [...patterns, newPat],
+                loading: false
+            }
+
         default:
             return state
     }
