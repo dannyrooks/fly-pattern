@@ -8,7 +8,11 @@ class MaterialsContainer extends React.Component{
     render() {
         return (
             <div>
-                <MaterialForm />
+                <MaterialForm id={this.props.match.params.id}/>
+                <ul>
+                    material here
+                </ul>
+
             </div>
         )
     }
