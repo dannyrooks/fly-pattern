@@ -15,7 +15,7 @@ class PatternsContainer extends React.Component {
     render() {
         const patterns = this.props.patterns.map((pattern, index) => 
         <p key={index}>
-          <Link to={{pathname: `/pattern/${index}/materials`}}>{pattern.name}</Link> | 
+          <Link to={{pathname: `/pattern/${pattern.id}/materials`}}>{pattern.name}</Link> | 
             {pattern.category} | {pattern.comment}
             </p>)
 
@@ -28,7 +28,7 @@ class PatternsContainer extends React.Component {
                 <br />
                 <div>
                   {this.props.loading ? <h3>Loading.....</h3> : patterns }
-                  
+                   {/* <Pattern patterns={this.props.materials}/>  */}
                 </div>
             </div>
         )

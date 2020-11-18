@@ -4,9 +4,12 @@ import { connect } from 'react-redux'
 import { fetchPatterns } from './actions/fetchPatterns'
 import { updatePatternForm } from './actions/fetchPatterns'
 import PatternsContainer from './containers/PatternsContainer'
-import MaterialsContainer from './containers/MaterialsContainer'
+// import MaterialsContainer from './containers/MaterialsContainer'
 import PatternCard from './components/PatternCard'
 import PatternForm from './components/PatternForm'
+// import MaterialForm from './components/MaterialForm'
+import Material from './components/Material' 
+// import Pattern from './components/Pattern'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
 import { Route, Switch } from 'react-router-dom'
@@ -29,8 +32,8 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route exact path='/patterns' component={PatternsContainer} />
           <Route exact path='/patterns/new' component={PatternForm} />
-          <Route exact path='/patterns/:id/materials' component={MaterialsContainer} />
-          {/* <Route exact path='/patterns/:id/materials' component={PatternsContainer} /> */}
+          <Route exact path='/patterns/:id/materials' component={PatternCard} />
+          <Route exact path='/materials' component={Material} />
         </Switch>
       </div>
     );
