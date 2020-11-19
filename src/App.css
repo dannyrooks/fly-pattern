@@ -22,7 +22,7 @@
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
 }
 
-.NavBar {
+/* .NavBar {
   margin: 2%;
   padding: 0 25%;
 }
@@ -96,4 +96,4 @@ header {
 
 .required-field { color: red; }
 .success-message, .secondary-labels { color: green }
-.button-names, .tertiary-labels { color: brown }
+.button-names, .tertiary-labels { color: brown } */

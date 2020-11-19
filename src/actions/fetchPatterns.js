@@ -5,7 +5,11 @@ export const fetchPatterns = () => {
         dispatch({type: "LOADING_SAVED_PATTERNS"})
         return fetch('/patterns')
         .then(res => res.json())
-        .then(data => dispatch({type: "PATTERNS_LOADED", payload: data}))
+        .then(data => {
+            console.log(data)
+            dispatch({type: "PATTERNS_LOADED", payload: data})
+        })
+        
     }
 }
 

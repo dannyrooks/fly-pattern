@@ -12,7 +12,7 @@ const Patterns = props => {
 
 const mapStateToProps = state => {
     return {
-        trips: state.Patterns
+        patterns: state.Patterns
     }
 }
 

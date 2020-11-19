@@ -1,30 +1,29 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchMaterials } from '../actions/fetchMaterials'
-import PatternCard from '../components/PatternCard'
 // import Card from 'react-bootstrap/Card'
 
 
-// maybe change this function to a class method? need to fix
-const PatternCard = ({ patterns }) => {
+const PatternCard = ({ patterns, id }) => {
+    console.log(patterns)
+    const pattern = patterns.find(pattern => pattern.id === id)
     return (
-        patterns ?
-        <div>
-                {/* add .find method here */} 
-            <h3>{patterns.name}</h3>
-            <p>{patterns.category}</p>
-            <p>{patterns.comment}</p>
-            <Link to={`/patterns/${patterns.id}/edit`}>Edit pattern</Link>
-        </div> :
+        // <div>
+        //     <h3>{pattern.name}</h3>
+        //     <p>{pattern.category}</p>
+        //     <p>{pattern.comment}</p>
+        //     {/* <Link to={`/patterns/${materials.id}/edit`}>Edit pattern</Link> */}
+        // </div>
         <p>This pattern has no materials!</p>
     )
 }
 
 
 const mapStateToProps = state => {
+    // debugger
     return {
-        patterns: state.MaterialReducer.materials
+        patterns: state.PatternReducer.patterns
     }
 }
 
