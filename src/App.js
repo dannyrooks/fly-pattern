@@ -30,11 +30,12 @@ class App extends React.Component {
         <NavBar></NavBar>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/patterns' component={PatternsContainer} />
-          <Route exact path='/patterns/new' component={PatternForm} />
-          <Route exact path='/patterns/:id/materials' component={PatternCard} />
-          <Route exact path='/materials' component={Material} />
+          <Route path='/patterns' component={PatternsContainer} />
+          <Route path='/patterns/new' component={PatternForm} />
+          <Route path='/patterns/:id/materials' component={PatternCard} />
+          <Route path='/materials' component={Material} />
         </Switch>
+        
       </div>
     );
   }

@@ -9,6 +9,7 @@ const PatternCard = ({ patterns, id }) => {
     console.log(patterns)
     const pattern = patterns.find(pattern => pattern.id === id)
     return (
+    
         // <div>
         //     <h3>{pattern.name}</h3>
         //     <p>{pattern.category}</p>
@@ -22,6 +23,7 @@ const PatternCard = ({ patterns, id }) => {
 
 const mapStateToProps = state => {
     // debugger
+    // console.log(state)
     return {
         patterns: state.PatternReducer.patterns
     }

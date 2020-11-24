@@ -49,8 +49,6 @@ export default (state = { patterns: [], loading: false }, action) => {
                 loading: false
             }
 
-            
-
         default:
             return state
     }
