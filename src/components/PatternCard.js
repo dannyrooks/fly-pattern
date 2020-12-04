@@ -1,33 +1,27 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { fetchMaterials } from '../actions/fetchMaterials'
+// import { Link } from 'react-router-dom'
+// import { fetchMaterials } from '../actions/fetchMaterials'
+// import { fetchPatterns } from '../actions/fetchPatterns'
+// import Button from 'react-bootstrap/Button'
 // import Card from 'react-bootstrap/Card'
 
 
-const PatternCard = ({ patterns, id }) => {
-    console.log(patterns)
-    const pattern = patterns.find(pattern => pattern.id === id)
-    return (
+class PatternCard extends React.Component {
     
-        // <div>
-        //     <h3>{pattern.name}</h3>
-        //     <p>{pattern.category}</p>
-        //     <p>{pattern.comment}</p>
-        //     {/* <Link to={`/patterns/${materials.id}/edit`}>Edit pattern</Link> */}
-        // </div>
-        <p>This pattern has no materials!</p>
-    )
-}
+    componentDidMount() {
+        const id = this.props.match.params.id
+        console.log(id)
+    }
 
-
-const mapStateToProps = state => {
-    // debugger
-    // console.log(state)
-    return {
-        patterns: state.PatternReducer.patterns
+    render() {
+        return(
+            <h2>Pattern Card with materials Here</h2>
+        )
     }
 }
 
 
-export default connect(mapStateToProps, { fetchMaterials })(PatternCard)
+
+
+export default connect()(PatternCard)

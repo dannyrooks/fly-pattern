@@ -1,10 +1,10 @@
-/* body {
+body {
   background-color: #3bac7dc4;
-} */
+}
 
-/* .App {
+.App {
   text-align: center;
-} */
+} 
 
 .image {
   position: absolute;
@@ -22,7 +22,7 @@
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
 }
 
-/* .NavBar {
+ .NavBar {
   margin: 2%;
   padding: 0 25%;
 }
@@ -32,10 +32,6 @@
   padding: 1%;
   background-color: #1a95d3;
 }
-
-.custom-caption {
-  color: black;
-} 
 
 header {
   position: relative;
@@ -57,7 +53,7 @@ header {
   padding-bottom: 1%;
 }
 
-.App-description, .pattern-form, .pattern-card {
+ .App-description, .pattern-form, .pattern-card {
   background-color: rgb(184, 20, 20);
   padding-top: 1%;
   padding-bottom: 1%;
@@ -67,33 +63,6 @@ header {
   height: 40vmin;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-@keyframes App-logo-spin { 
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.required-field { color: red; }
+ .required-field { color: red; }
 .success-message, .secondary-labels { color: green }
-.button-names, .tertiary-labels { color: brown } */
+.button-names, .tertiary-labels { color: brown } 

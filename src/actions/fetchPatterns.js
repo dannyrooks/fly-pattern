@@ -1,4 +1,3 @@
-// actions are functions that return those objects
 
 export const fetchPatterns = () => {
     return (dispatch) => {
@@ -6,10 +5,9 @@ export const fetchPatterns = () => {
         return fetch('/patterns')
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
             dispatch({type: "PATTERNS_LOADED", payload: data})
         })
-        
     }
 }
 
@@ -23,8 +21,18 @@ export const addPattern = (pattern) => {
                 'Content-Type': 'application/json'
             }
         })
-        .then(res => res.json())
-        .then(pattern => dispatch({ type: "PATTERN_ADDED", payload: pattern}))
+        .then(res => {
+            if(!res.ok) {throw res}
+            else return res.json()
+        })
+        .then(pattern => {
+            return dispatch({ type: "PATTERN_ADDED", payload: pattern})
+        })
+        .catch((error) => {
+            error.text().then(errorMessage => {
+                alert(errorMessage)
+            })
+        })
     }
 }
 
