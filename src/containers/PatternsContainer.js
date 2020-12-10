@@ -12,12 +12,17 @@ import '../App.css';
 
 
 class PatternsContainer extends React.Component {
+  
+    // handleDelete = () => {
+    
+    // }
 
     render() {
         const patterns = this.props.patterns.map(pattern => 
         <p key={pattern.id}>
           <Link to={{pathname: `/patterns/${pattern.id}`}}>{pattern.name}</Link> | 
             {pattern.category} | {pattern.comment}
+            {/* <button onClick={handleDelete}>Delete</button> */}
             </p>)
 
         return (
@@ -33,6 +38,8 @@ class PatternsContainer extends React.Component {
     }
 }
 
+
+
 const mapStateToProps = state => {
   // console.dir(state)
   // debugger
@@ -43,4 +50,4 @@ const mapStateToProps = state => {
     }
   }
 
-export default connect(mapStateToProps, { fetchPatterns})(PatternsContainer)
+export default connect(mapStateToProps, { fetchPatterns })(PatternsContainer)

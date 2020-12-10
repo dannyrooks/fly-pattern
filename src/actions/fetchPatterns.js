@@ -45,6 +45,12 @@ export const updatePatternForm = (name, value) => {
     }
 }
 
+// export const deletePattern = (patternId) => {
+//     return dispatch => {
+//         return fetch(`/patterns`)
+//     }
+// }
+
 
 
 
