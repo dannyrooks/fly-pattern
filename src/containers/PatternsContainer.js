@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { fetchPatterns } from '../actions/fetchPatterns'
-// import { fetchMaterials } from '../actions/fetchMaterials'
 import { Link } from 'react-router-dom'
 // import PatternForm from '../components/PatternForm'
 import '../App.css';
@@ -41,7 +40,7 @@ class PatternsContainer extends React.Component {
 
 
 const mapStateToProps = state => {
-  console.log(state)
+  // console.log(state.PatternsReducer.patterns)
   // debugger
     return {
       patterns: state.PatternsReducer.patterns,

@@ -5,7 +5,7 @@ export const fetchPatterns = () => {
         return fetch('/patterns')
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
             dispatch({type: "PATTERNS_LOADED", payload: data})
         })
     }
@@ -36,14 +36,38 @@ export const addPattern = (pattern) => {
     }
 }
 
-export const updatePatternForm = (name, value) => {
-    console.log("FORM ACTION FIRED!!")
-    const formData = { name, value }
-    return {
-        type: "UPDATE_PATTERN_FORM",
-        formData
+export const addMaterial = (material, id) => {
+    return (dispatch) => {
+        dispatch({ type: "ADD_MATERIAL"}, material)
+        return fetch(`/patterns/${id}/materials`, {
+            method: "POST",
+            body: JSON.stringify(material),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => {
+            if(!res.ok) {throw res}
+            else 
+                return res.json()
+        })
+        .catch((error) => {
+            error.text()
+            .then(errorMessage => {
+                alert(errorMessage)
+            })
+        })
     }
 }
+
+// export const updatePatternForm = (name, value) => {
+//     console.log("FORM ACTION FIRED!!")
+//     const formData = { name, value }
+//     return {
+//         type: "UPDATE_PATTERN_FORM",
+//         formData
+//     }
+// }
 
 // export const deletePattern = (patternId) => {
 //     return dispatch => {

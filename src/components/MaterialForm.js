@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addMaterial } from '../actions/fetchMaterials'
+import { addMaterial } from '../actions/fetchPatterns'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addPattern } from '../actions/fetchPatterns'
-// import { updatePatternForm } from '../actions/fetchPatterns'
 import { Redirect } from 'react-router-dom'
 import '../App.css'
 import Form from 'react-bootstrap/Form'

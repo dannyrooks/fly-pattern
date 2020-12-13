@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 // import { BrowserRouter as Router } from 'react-router-dom'
 import Material from '../components/Material'
 import MaterialForm from '../components/MaterialForm'
-// import { fetchMaterials } from '../actions/fetchMaterials'
+// import { fetchMaterials } from '../actions/materialActions'
 
 class MaterialsContainer extends React.Component{
 
