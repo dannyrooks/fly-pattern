@@ -41,7 +41,7 @@ class PatternsContainer extends React.Component {
 
 
 const mapStateToProps = state => {
-  // console.dir(state)
+  console.dir(state)
   // debugger
     return {
       patterns: state.PatternReducer.patterns,

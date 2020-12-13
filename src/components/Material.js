@@ -1,8 +1,8 @@
 import React from 'react'
 
 function Material(patterns) {
-    // debugger
-    let pattern = patterns.patterns.filter(p => p.id === patterns.patterns.match.params.id)[0]
+    
+    const pattern = patterns.filter(p => p.id === patterns.patterns.match.params.id)[0]
 
     const matList = pattern.materials.map((material, index) => <li key={index}>{material.description}</li>)
 

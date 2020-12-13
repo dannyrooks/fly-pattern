@@ -31,7 +31,7 @@ class MaterialForm extends React.Component {
         return(
             <Form onSubmit={this.handleSubmit}>
                 <br />
-                <h2>Add New Material</h2>
+                <h2>Add Material</h2>
                 Name:
                 <input 
                     placeholder="name"
