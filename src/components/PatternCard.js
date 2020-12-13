@@ -10,17 +10,17 @@ import CardDeck from 'react-bootstrap/CardDeck'
 
 class PatternCard extends React.Component {
     
-    componentDidMount() {
-        const id = this.props.match.params.id
-        console.log(id)
-        this.props.fetchPatterns()
-        }
+    // componentDidMount() {
+    //     const id = this.props.match.params.id
+    //     console.log(id)
+    //     this.props.fetchPatterns()
+    //     }
 
     render() {
-        const patternCard = this.props.patterns.map(pattern =>
-            <p key={pattern.id}>
-                
-            </p>)
+        // const patternCard = this.props.patterns.map(pattern =>
+        //     <p key={pattern.id}>
+
+        //     </p>)
         return(
             <div>
                 <h2>Pattern Card with materials Here</h2>

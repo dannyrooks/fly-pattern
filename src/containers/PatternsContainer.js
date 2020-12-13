@@ -44,9 +44,9 @@ const mapStateToProps = state => {
   console.log(state)
   // debugger
     return {
-      patterns: state.PatternReducer.patterns,
+      patterns: state.PatternsReducer.patterns,
       // materials: state.MaterialsReducer.materials,
-      loading: state.PatternReducer.loading
+      loading: state.PatternsReducer.loading
     }
   }
 

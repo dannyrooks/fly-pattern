@@ -2,8 +2,7 @@
 // updates the part of my store that have to do with the pattern
 // action is sent to reducer
 
-export default (state = { patterns: [], loading: false }, action) => {
-
+const patternsReducer = (state = { patterns: [], loading: false }, action) => {
     switch(action.type) {
         case "LOADING_SAVED_PATTERNS":
             return {
@@ -53,3 +52,5 @@ export default (state = { patterns: [], loading: false }, action) => {
             return state
     }
 }
+
+export default patternsReducer

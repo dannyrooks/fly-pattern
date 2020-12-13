@@ -1,11 +1,11 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk'
-import PatternReducer from './reducers/PatternReducer'
+import PatternsReducer from './reducers/PatternsReducer'
 // import PatternFormReducer from './reducers/PatternFormReducer'
 
 
 const reducer = combineReducers({
-    PatternReducer,
+    PatternsReducer,
     // PatternFormReducer
 })
 
