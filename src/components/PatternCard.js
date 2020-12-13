@@ -17,7 +17,10 @@ class PatternCard extends React.Component {
         }
 
     render() {
-
+        const patternCard = this.props.patterns.map(pattern =>
+            <p key={pattern.id}>
+                
+            </p>)
         return(
             <div>
                 <h2>Pattern Card with materials Here</h2>

@@ -6,32 +6,33 @@ body {
   text-align: center;
 } 
 
+
 .image {
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   width: 120px;
   height: 120px;
   margin:-60px 0 0 -60px;
-  -webkit-animation:spin 4s linear infinite;
-  -moz-animation:spin 4s linear infinite;
+  /* -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite; */
   animation:spin 4s linear infinite;
 }
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
-}
+
+/* @-moz-keyframes spin { 120% { -moz-transform: rotate(360deg); } } */
+/* @-webkit-keyframes spin { 120% { -webkit-transform: rotate(360deg); } } */
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
  .NavBar {
   margin: 2%;
   padding: 0 25%;
 }
 
-.App section {
+/* .App section {
   margin: 1% 5% 2%;
   padding: 1%;
   background-color: #1a95d3;
-}
+} */
 
 header {
   position: relative;
@@ -54,7 +55,7 @@ header {
 }
 
  .App-description, .pattern-form, .pattern-card {
-  background-color: rgb(184, 20, 20);
+  background-color: white;
   padding-top: 1%;
   padding-bottom: 1%;
 } 
@@ -63,6 +64,8 @@ header {
   height: 40vmin;
   pointer-events: none;
 }
- .required-field { color: red; }
+
+
+.required-field { color: red; }
 .success-message, .secondary-labels { color: green }
 .button-names, .tertiary-labels { color: brown } 
