@@ -5,7 +5,7 @@ export const fetchPatterns = () => {
         return fetch('/patterns')
         .then(res => res.json())
         .then(data => {
-            // console.log(data)
+            console.log(data)
             dispatch({type: "PATTERNS_LOADED", payload: data})
         })
     }

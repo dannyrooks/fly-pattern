@@ -9,14 +9,9 @@ import { fetchPatterns } from '../actions/fetchPatterns'
 import CardDeck from 'react-bootstrap/CardDeck'
 
 class PatternCard extends React.Component {
-    
-    // componentDidMount() {
-    //     const id = this.props.match.params.id
-    //     console.log(id)
-    //     this.props.fetchPatterns()
-    //     }
 
     render() {
+        // console.log(this.props)
         // const patternCard = this.props.patterns.map(pattern =>
         //     <p key={pattern.id}>
 
@@ -33,8 +28,5 @@ class PatternCard extends React.Component {
         )
     }
 }
-
-
-
 
 export default connect(null, { fetchPatterns })(PatternCard)

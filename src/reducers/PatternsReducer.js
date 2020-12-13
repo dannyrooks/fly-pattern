@@ -7,6 +7,7 @@ const patternsReducer = (state = { patterns: [], loading: false }, action) => {
         case "LOADING_SAVED_PATTERNS":
             return {
                 ...state,
+                patterns: state.patterns,
                 loading: true
             }
             
