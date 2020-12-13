@@ -1,7 +1,5 @@
 import React from 'react'
-import '../App.css'
 import Image from 'react-bootstrap/Image'
-// import '../index.css'
 
 function Home() {
     
