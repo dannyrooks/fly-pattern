@@ -15,13 +15,14 @@ class PatternCard extends React.Component {
         // const id = this.props.match.params
         console.log(this.props.patterns[0]) // need to destructure?
         const patternCard = this.props.patterns.map(pattern =>
-            <p key={pattern.id}>
+            <li key={pattern.id}>
                 {pattern.name}
 
-            </p>)
+            </li>)
         return(
             <div>
                 <h2>pattern card name with materials Here</h2>
+                <ul>{patternCard}</ul>
                 <CardDeck>
                   <p>{`patterns/${this.props.match.params.id}/materials`}</p>
                   <MaterialForm />  
@@ -33,7 +34,7 @@ class PatternCard extends React.Component {
 }
 
 const mapStateToProps = state => {
-    // console.log(state)
+    console.log(state)
     return {
         patterns: state.PatternsReducer.patterns
     }
