@@ -2,14 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import MaterialForm from '../components/MaterialForm'
 import { fetchPatterns } from '../actions/fetchPatterns'
-import Pattern from '../components/Pattern'
+// import Pattern from '../components/Pattern'
 import CardDeck from 'react-bootstrap/CardDeck'
  
 class PatternCard extends React.Component {
 
     render() {
         
-        const obj = this.state.Pattern
+        const obj = this.state
         console.log(obj) // need to destructure?
         const patternCard = this.props.patterns.map(pattern =>
             <li key={pattern.id}>
