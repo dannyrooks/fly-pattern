@@ -1,7 +1,6 @@
-import React from 'react'
-// import PatternCard from './PatternCard'
+import React from 'react' 
 
-const Pattern = props => {
+const Material = props => {
     return (
         <div>
             <h4>{props.name}</h4>
@@ -10,5 +9,4 @@ const Pattern = props => {
     )
 }
 
-
-export default Pattern
+export default Material

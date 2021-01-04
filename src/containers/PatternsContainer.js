@@ -4,10 +4,6 @@ import { fetchPatterns } from '../actions/fetchPatterns'
 import { Link } from 'react-router-dom'
 
 class PatternsContainer extends React.Component {
-  
-    // handleDelete = () => {
-    
-    // }
 
     render() {
         const patterns = this.props.patterns.map(pattern => 
