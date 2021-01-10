@@ -1,5 +1,7 @@
 body {
   background-color: #3bac7dc4;
+  text-align: center;
+
   
 }
 
@@ -28,6 +30,8 @@ body {
  .NavBar {
   margin: 2%;
   padding: 0 25%;
+  text-align: center;
+
 }
 
 /* .App section {
@@ -49,17 +53,19 @@ header {
   justify-content: center;
 }
 
-.main-pattern-info {
+/* .main-pattern-info {
   background-color: palevioletred;
   color: white; 
   padding-top: 1%;
   padding-bottom: 1%;
-}
+} */
 
  .App-description, .pattern-form, .pattern-card {
   background-color: white;
   padding-top: 1%;
   padding-bottom: 1%;
+  text-align: center;
+
 } 
 
 .App-logo {

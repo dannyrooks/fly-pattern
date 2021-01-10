@@ -5,7 +5,7 @@
 
 const patternsReducer = (state = { patterns: [], loading: false }, action) => {
     switch(action.type) {
-        case "LOADING_SAVED_PATTERNS":
+        case "FETCHING_PATTERNS":
             return {
                 ...state,
                 patterns: state.patterns,
@@ -51,12 +51,24 @@ const patternsReducer = (state = { patterns: [], loading: false }, action) => {
             }    
 
         case "MATERIAL_ADDED":
-            console.log('material added!')
             return {
                 ...state,
                 materials: [...state.materials, action.payload],
                 loading: false
             }
+
+        // case "MATERIAL_ADDED":
+        //     let pattern = state.patterns.filter(p => p.id === action.payload.pattern_id)[0]
+        //     let newPattern = {
+        //         ...pattern,
+        //         materials: [...pattern.materials, action.payload]}
+        //         let patterns = state.patterns.filter(p => p.id !== action.payload.pattern_id)
+        //     return {
+        //         ...state,
+        //         patterns: [...patterns, newPattern],
+        //         loading: false
+        //     }
+        
 
         default:
             return state

@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addMaterial } from '../actions/fetchMaterials'
+import { addMaterial } from '../actions/fetchPatterns'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
@@ -10,6 +10,7 @@ class MaterialForm extends React.Component {
         name: "",
         description: "",
         pattern_id: "",
+        // materials: "",
         loading: false
     }
 
@@ -21,7 +22,7 @@ class MaterialForm extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.props.addMaterial(this.state, this.props.id)
+        this.props.addMaterial(this.state)
         this.setState({
             name: "",
             description: ""
@@ -31,7 +32,7 @@ class MaterialForm extends React.Component {
         return(
             <Form onSubmit={this.handleSubmit}>
                 <br />
-                <h2>Add Material</h2>
+                <h4>Add New Material</h4>
                 Name:
                 <input 
                     placeholder="name"

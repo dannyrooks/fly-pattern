@@ -3,6 +3,7 @@ import './App.css'
 import { connect } from 'react-redux'
 import { fetchPatterns } from './actions/fetchPatterns'
 import PatternsContainer from './containers/PatternsContainer'
+import MaterialsContainer from './containers/MaterialsContainer'
 import PatternCard from './components/PatternCard'
 import PatternForm from './components/PatternForm'
 import Home from './components/Home'
@@ -25,13 +26,20 @@ class App extends React.Component {
           <Route exact path='/patterns/new' component={PatternForm} />
           <Route exact path='/patterns/:id' component={PatternCard} />
           <Route exact path='/patterns' component={PatternsContainer} /> 
+          <Route exact path='patterns/:id/materials' component={MaterialsContainer} /> 
           <Route exact path='/' component={Home} />
-          {/* <Route exact path='/materials' component={MaterialsContainer} />  */}
         </Switch>
       </div>
     );
   }
 }
+
+// const mapStateToProps = state => {
+//   return {
+//     patterns: state.PatternsReducer.patterns,
+//     loading: state.PatternsReducer.loading
+//   }
+// }
 
 const mapDispatchToProps = dispatch => ({
   fetchPatterns: () => dispatch( fetchPatterns() ),

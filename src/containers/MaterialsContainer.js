@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 // import { BrowserRouter as Router } from 'react-router-dom'
 import Material from '../components/Material'
 import MaterialForm from '../components/MaterialForm'
-// import { fetchMaterials } from '../actions/materialActions'
 
 class MaterialsContainer extends React.Component{
 
@@ -21,6 +20,7 @@ class MaterialsContainer extends React.Component{
 }
 
 const mapStateToProps = state => {
+    // console.log(state)
     return {
         patterns: state.PatternReducer.patterns
     }

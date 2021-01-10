@@ -1,24 +1,25 @@
 
 export const fetchPatterns = () => {
-    return (dispatch) => {
-        dispatch({type: "LOADING_SAVED_PATTERNS"})
+    return dispatch => {
+        dispatch({ type: "FETCHING_PATTERNS" })
         return fetch('/patterns')
         .then(res => res.json())
         .then(data => {
-            // console.log(data)
-            dispatch({type: "PATTERNS_LOADED", payload: data})
+            console.log('fetching patterns!')
+            return dispatch({type: "PATTERNS_LOADED", payload: data})
         })
     }
 }
 
 export const addPattern = (pattern) => {
-    return (dispatch) => {
+    return dispatch => {
         dispatch({ type: "ADD_PATTERN"})
         fetch('/patterns', {
             method: "POST",
             body: JSON.stringify(pattern),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': "application/json"
             }
         })
         .then(res => {
@@ -29,7 +30,8 @@ export const addPattern = (pattern) => {
             return dispatch({ type: "PATTERN_ADDED", payload: pattern})
         })
         .catch((error) => {
-            error.text().then(errorMessage => {
+            error.text()
+            .then(errorMessage => {
                 alert(errorMessage)
             })
         })
@@ -37,19 +39,21 @@ export const addPattern = (pattern) => {
 }
 
 // export const addMaterial = (material, id) => {
-//     return (dispatch) => {
-//         dispatch({ type: "ADD_MATERIAL"}, material)
+//     return dispatch => {
+//         dispatch({type: "ADD_MATERIAL"})
 //         return fetch(`/patterns/${id}/materials`, {
 //             method: "POST",
 //             body: JSON.stringify(material),
 //             headers: {
-//                 'Content-Type': 'application/json'
+//                 'Content-Type': 'application/json',
 //             }
 //         })
 //         .then(res => {
 //             if(!res.ok) {throw res}
-//             else 
-//                 return res.json()
+//             else return res.json()
+//         })
+//         .then(material => {
+//            return dispatch({ type: 'MATERIAL_ADDED', payload: material })
 //         })
 //         .catch((error) => {
 //             error.text()
@@ -60,20 +64,24 @@ export const addPattern = (pattern) => {
 //     }
 // }
 
-// export const updatePatternForm = (name, value) => {
-//     console.log("FORM ACTION FIRED!!")
-//     const formData = { name, value }
-//     return {
-//         type: "UPDATE_PATTERN_FORM",
-//         formData
-//     }
-// }
+export const addMaterial = (id) => {
+    return dispatch => {
+        dispatch({type: "ADD_MATERIAL"})
+        return fetch(`/patterns/${id}/materials`, {
+            method: "POST",
+            body: JSON.stringify(id),
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        .then(res => res.json())
+        .then(material => {
+            console.log('material added!')
+            return dispatch({type: 'MATERIAL_ADDED', payload: material})
+        })
+    }
+}
 
-// export const deletePattern = (patternId) => {
-//     return dispatch => {
-//         return fetch(`/patterns`)
-//     }
-// }
 
 
 
