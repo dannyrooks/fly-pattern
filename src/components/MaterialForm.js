@@ -3,14 +3,13 @@ import { connect } from 'react-redux'
 import { addMaterial } from '../actions/fetchPatterns'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+// import { useParams } from 'react-router-dom'
 
 class MaterialForm extends React.Component {
     
     state = {
         name: "",
         description: "",
-        pattern_id: "",
-        // materials: "",
         loading: false
     }
 
@@ -22,7 +21,10 @@ class MaterialForm extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.props.addMaterial(this.state)
+        // debugger
+        // console.log(this.props.match)
+        const patternId = this.props.patternId
+        this.props.addMaterial(this.state, patternId) //pattern_id?
         this.setState({
             name: "",
             description: ""
@@ -58,5 +60,12 @@ class MaterialForm extends React.Component {
 
 }
 
+const mapStateToProps = state => {
+    // console.log(state) 
+    return {
+        patterns: state.PatternsReducer.patterns
+    }
+}
 
-export default connect(null, { addMaterial })(MaterialForm)
+
+export default connect(mapStateToProps, { addMaterial })(MaterialForm)

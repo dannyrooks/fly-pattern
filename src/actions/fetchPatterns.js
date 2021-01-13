@@ -38,45 +38,21 @@ export const addPattern = (pattern) => {
     }
 }
 
-// export const addMaterial = (material, id) => {
-//     return dispatch => {
-//         dispatch({type: "ADD_MATERIAL"})
-//         return fetch(`/patterns/${id}/materials`, {
-//             method: "POST",
-//             body: JSON.stringify(material),
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             }
-//         })
-//         .then(res => {
-//             if(!res.ok) {throw res}
-//             else return res.json()
-//         })
-//         .then(material => {
-//            return dispatch({ type: 'MATERIAL_ADDED', payload: material })
-//         })
-//         .catch((error) => {
-//             error.text()
-//             .then(errorMessage => {
-//                 alert(errorMessage)
-//             })
-//         })
-//     }
-// }
-
-export const addMaterial = (id) => {
+export const addMaterial = (material, id) => {
     return dispatch => {
         dispatch({type: "ADD_MATERIAL"})
         return fetch(`/patterns/${id}/materials`, {
             method: "POST",
-            body: JSON.stringify(id),
+            body: JSON.stringify(material),
             headers: {
                 'Content-Type': 'application/json',
+                'Accept-Type': 'application/json'
             }
         })
         .then(res => res.json())
+    
         .then(material => {
-            console.log('material added!')
+            console.log(material)
             return dispatch({type: 'MATERIAL_ADDED', payload: material})
         })
     }

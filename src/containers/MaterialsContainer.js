@@ -11,7 +11,7 @@ class MaterialsContainer extends React.Component{
             <div>
                 <MaterialForm id={this.props.match.params.id}/>
                 <ul>
-                    <Material patterns={this.props} />
+                    <Material material={this.props} />
                 </ul>
 
             </div>
@@ -20,10 +20,12 @@ class MaterialsContainer extends React.Component{
 }
 
 const mapStateToProps = state => {
-    // console.log(state)
+    console.log(state)
     return {
-        patterns: state.PatternReducer.patterns
+        patterns: state.PatternReducer.patterns,
+        loading: state.PatternReducer.loading
     }
+
 }
 
 

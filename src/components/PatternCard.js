@@ -10,6 +10,7 @@ class PatternCard extends React.Component {
     render() {
         
         const id = this.props.match.params.id
+        // console.log(this.props)
         // console.log(this.props.match.params.id)
         // const patternCard = this.props.patterns.map(pattern =>
         //     <li key={pattern.id}>
@@ -18,7 +19,7 @@ class PatternCard extends React.Component {
 
             // </li>)
         return(
-            <div className="PatterCard">
+            <div className="PatternCard">
                 <br />
                 <h2>Pattern Card</h2>
                 <br />
@@ -26,7 +27,7 @@ class PatternCard extends React.Component {
                 <ul></ul>
                 {/* <CardDeck> */}
                   <p>{`patterns/${id}/materials`}</p>
-                  <MaterialForm />  
+                  <MaterialForm patternId={id}/>  
                 {/* </CardDeck> */}
                 
             </div>

@@ -35,4 +35,4 @@ const mapStateToProps = state => {
     }
   }
 
-export default connect(mapStateToProps, { fetchPatterns })(PatternsContainer)
+export default connect(mapStateToProps, { fetchPatterns })(PatternsContainer) 

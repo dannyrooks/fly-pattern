@@ -53,7 +53,7 @@ const patternsReducer = (state = { patterns: [], loading: false }, action) => {
         case "MATERIAL_ADDED":
             return {
                 ...state,
-                materials: [...state.materials, action.payload],
+                // patterns: [...state.materials, action.payload],
                 loading: false
             }
 

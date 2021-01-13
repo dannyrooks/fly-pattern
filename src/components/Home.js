@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'react-bootstrap/Image'
 
-function Home() {
+const Home = () => {
     
     return (
         <Image className="image" 
