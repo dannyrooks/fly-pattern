@@ -31,6 +31,7 @@ class MaterialForm extends React.Component {
         })
     }
     render() {
+        // const patternName = this.props.pattern.map((pattern, i) => <li key={i}>{pattern.name}</li>)
         return(
             <Form onSubmit={this.handleSubmit}>
                 <br />

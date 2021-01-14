@@ -78,9 +78,9 @@ class PatternForm extends React.Component {
     }
 }
 
-const mapDispatchToProps = dispatch => ({
-    addPattern: patternData => dispatch(addPattern(patternData))
-})
+// const mapDispatchToProps = dispatch => ({
+//     addPattern: patternData => dispatch(addPattern(patternData))
+// })
 
 
-export default connect(null, { mapDispatchToProps, addPattern })(PatternForm)
+export default connect(null, { addPattern })(PatternForm)

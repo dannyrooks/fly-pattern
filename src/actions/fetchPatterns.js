@@ -24,10 +24,10 @@ export const addPattern = (pattern) => {
         })
         .then(res => {
             if(!res.ok) {throw res}
-            else return res.json()
+            res.json()
         })
         .then(pattern => {
-            return dispatch({ type: "PATTERN_ADDED", payload: pattern})
+            return dispatch({ type: "PATTERN_ADDED", payload: pattern })
         })
         .catch((error) => {
             error.text()

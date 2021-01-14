@@ -2,14 +2,26 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fetchPatterns } from '../actions/fetchPatterns'
 import { Link } from 'react-router-dom'
+import Button from  'react-bootstrap/Button'
 
 class PatternsContainer extends React.Component {
+  state = {
+    like: 0,
+    unlike: 0
+  }
+
+  handleClick = () => {
+    this.setState((prevState) => {
+      return { like: prevState.like + 1} 
+      // return{unlike: prevState.unlike -1 }
+    })
+  }
 
     render() {
         const patterns = this.props.patterns.map(pattern => 
         <p key={pattern.id}>
           <Link to={{pathname: `/patterns/${pattern.id}`}}>{pattern.name}</Link> | 
-            {pattern.category} | {pattern.comment}
+            {pattern.category} | {pattern.comment} | <Button onClick={this.handleClick}>like ({this.state.like})</Button><Button>unlike</Button>
             {/* <button onClick={handleDelete}>Delete</button> */}
             </p>)
 

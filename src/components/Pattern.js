@@ -4,30 +4,27 @@ import { connect } from 'react-redux'
 // import PatternCard from '../components/PatternCard'
 
 class Pattern extends React.Component {
+    
 
     render() {
         // const pattern = this.props.patterns.map((pattern, i) => <li key={i}>(pattern.name)</li>)
         // console.log(name)
+
+        // trying to reach in to find patterns name and display 
+        // const filterPat = this.props.patterns.filter( pat => pat[0].id === this.props.patternId)
+        // console.log(this.props.patterns)    
+        // console.log(filterPat)  
+        // console.log(this.props.patternId)
     
 
     return(
         <div className="Pattern">
-            <h3>Pattern Name:</h3>
+            <h3>Pattern Name: {}</h3>
             <ul>{}</ul>
         </div>
     )
     }
 }
-
-// const Pattern = props => {
-//     console.log(props)
-//     return (
-//         <div>
-//             <h4>{props.name}</h4>
-//             <p>{props.description}</p>
-//         </div>
-//     )
-// }
 
 const mapStateToProps = state => {
     return {
