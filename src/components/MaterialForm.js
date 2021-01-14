@@ -1,8 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addMaterial } from '../actions/fetchPatterns'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
+import { Form, Button } from 'react-bootstrap'
 // import { useParams } from 'react-router-dom'
 
 class MaterialForm extends React.Component {
@@ -24,7 +23,8 @@ class MaterialForm extends React.Component {
         // debugger
         // console.log(this.props.match)
         const patternId = this.props.patternId
-        this.props.addMaterial(this.state, patternId) //pattern_id?
+        // debugger
+        this.props.addMaterial(this.state, patternId) 
         this.setState({
             name: "",
             description: ""

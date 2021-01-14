@@ -41,18 +41,16 @@ export const addPattern = (pattern) => {
 export const addMaterial = (material, id) => {
     return dispatch => {
         dispatch({type: "ADD_MATERIAL"})
-        return fetch(`/patterns/${id}/materials`, {
+        fetch(`/patterns/${id}/materials`, {
             method: "POST",
             body: JSON.stringify(material),
             headers: {
                 'Content-Type': 'application/json',
-                'Accept-Type': 'application/json'
             }
         })
         .then(res => res.json())
-    
         .then(material => {
-            console.log(material)
+            // console.log(material)
             return dispatch({type: 'MATERIAL_ADDED', payload: material})
         })
     }

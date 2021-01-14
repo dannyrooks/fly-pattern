@@ -4,20 +4,14 @@ import MaterialForm from '../components/MaterialForm'
 import { fetchPatterns } from '../actions/fetchPatterns'
 import Pattern from '../components/Pattern'
 // import CardDeck from 'react-bootstrap/CardDeck'
+import Button from 'react-bootstrap/Button'
  
-class PatternCard extends React.Component {
+class PatternCard extends React.Component {    
 
-    render() {
+    render() { //render is a function
         
         const id = this.props.match.params.id
-        // console.log(this.props)
-        // console.log(this.props.match.params.id)
-        // const patternCard = this.props.patterns.map(pattern =>
-        //     <li key={pattern.id}>
-        //         {pattern.name}
-                
 
-            // </li>)
         return(
             <div className="PatternCard">
                 <br />
@@ -27,9 +21,11 @@ class PatternCard extends React.Component {
                 <ul></ul>
                 {/* <CardDeck> */}
                   <p>{`patterns/${id}/materials`}</p>
-                  <MaterialForm patternId={id}/>  
+                  
+                  <MaterialForm patternId={id}/>  {/* why does it break when patternId is removed?*/}
                 {/* </CardDeck> */}
-                
+
+                <Button onClick={this.handleClick}>Likes {this.state.likes}</Button>
             </div>
         )
     }
