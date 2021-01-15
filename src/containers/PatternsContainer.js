@@ -13,15 +13,18 @@ class PatternsContainer extends React.Component {
   handleClick = () => {
     this.setState((prevState) => {
       return { like: prevState.like + 1} 
-      // return{unlike: prevState.unlike -1 }
+      // return {unlike: prevState.unlike -1 }
     })
   }
 
     render() {
+      
         const patterns = this.props.patterns.map(pattern => 
         <p key={pattern.id}>
           <Link to={{pathname: `/patterns/${pattern.id}`}}>{pattern.name}</Link> | 
-            {pattern.category} | {pattern.comment} | <Button onClick={this.handleClick}>like ({this.state.like})</Button><Button>unlike</Button>
+            {pattern.category} | {pattern.comment} | 
+            <Button onClick={this.handleClick}>like ({this.state.like})
+            </Button><Button>unlike</Button>
             {/* <button onClick={handleDelete}>Delete</button> */}
             </p>)
 
