@@ -5,7 +5,7 @@ export const fetchPatterns = () => {
         return fetch('/patterns')
         .then(res => res.json())
         .then(data => {
-            console.log('fetching patterns!')
+            // console.log('fetching patterns!')
             return dispatch({type: "PATTERNS_LOADED", payload: data})
         })
     }
@@ -28,12 +28,7 @@ export const addPattern = (pattern) => {
         })
         .then(pattern => {
             return dispatch({ type: "PATTERN_ADDED", payload: pattern })
-        })
-        .catch((error) => {
-            error.text()
-            .then(errorMessage => {
-                alert(errorMessage)
-            })
+        
         })
     }
 }
@@ -50,7 +45,7 @@ export const addMaterial = (material, id) => {
         })
         .then(res => res.json())
         .then(material => {
-            // console.log(material)
+            console.log(material)
             return dispatch({type: 'MATERIAL_ADDED', payload: material})
         })
     }

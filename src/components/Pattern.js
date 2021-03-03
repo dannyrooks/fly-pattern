@@ -1,26 +1,44 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { connect } from 'react-redux'
-// import PatternsContainer from '../containers/PatternsContainer'
+// import MaterialsContainer from '../containers/MaterialsContainer'
 // import PatternCard from '../components/PatternCard'
+// import Button from 'react-bootstrap/Button'
 
-class Pattern extends React.Component {
+class Pattern extends Component {
     
+    // Like button commented out 
+
+    // state = {
+    //     like: 0
+    // }
+    
+    // handleLikeClick = () => {
+    //     this.setState((prevState) => {
+    //       return { like: prevState.like + 1} 
+    //     })
+    //   }
+    
+      // handleUnlikeClick = () => {
+      //   this.setState((prevState) => {
+      //     return { like: prevState.like - 1 }
+      //   })
+      // }
 
     render() {
-        // const pattern = this.props.patterns.map((pattern, i) => <li key={i}>(pattern.name)</li>)
-        // console.log(name)
-
-        // trying to reach in to find patterns name and display 
-        // const filterPat = this.props.patterns.filter( pat => pat[0].id === this.props.patternId)
-        // console.log(this.props.patterns)    
-        // console.log(filterPat)  
-        // console.log(this.props.patternId)
-    
+        const filterPat = this.props.patterns.filter(pattern => pattern.id == this.props.patternId)
+        // console.log(filterPat[0].materials)
+        // console.log(state)
+                
 
     return(
         <div className="Pattern">
-            <h3>Pattern Name: {}</h3>
-            <ul>{}</ul>
+            <h3>{!filterPat[0] ? null : filterPat[0].name}</h3>
+            <ul></ul>
+            <ul>
+                {/* <Button onClick={this.handleLikeClick}>like </Button>
+                 <Button onClick={this.handleUnlikeClick}>unlike </Button>
+                 <ul>Likes: {this.state.like}</ul>  */}
+                </ul>
         </div>
     )
     }

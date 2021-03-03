@@ -1,17 +1,26 @@
 import React from 'react'
 import { connect } from 'react-redux'
 // import { BrowserRouter as Router } from 'react-router-dom'
-import Material from '../components/Material'
-import MaterialForm from '../components/MaterialForm'
+import Materials from '../components/Materials'
+import {fetchMaterials} from '../actions/fetchMaterials'
+// import MaterialForm from '../components/MaterialForm'
 
 class MaterialsContainer extends React.Component{
+    componentDidMount() {
+        this.props.fetchMaterials()
+    }
 
     render() {
+        console.log(this.props)
+
+        // const patMat = this.props.patterns.map((material, i) => <p key={i}>{material.name}
+        // </p>)
+
         return (
+        
             <div>
-                <MaterialForm id={this.props.match.params.id}/>
                 <ul>
-                    <Material material={this.props} />
+                    <Materials materials={this.props.materials} />
                 </ul>
 
             </div>
@@ -23,10 +32,11 @@ const mapStateToProps = state => {
     console.log(state)
     return {
         patterns: state.PatternReducer.patterns,
+        materials: state.PatternReducer,
         loading: state.PatternReducer.loading
     }
 
-}
+} 
 
 
-export default connect(mapStateToProps)(MaterialsContainer)
+export default connect(mapStateToProps, { fetchMaterials })(MaterialsContainer)

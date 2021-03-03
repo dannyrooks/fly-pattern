@@ -63,12 +63,12 @@ const patternsReducer = (state = { patterns: [], loading: false }, action) => {
             }
             //looks for the pattern that is passed in and making sure it matches with the pattern id of the material if yes then adds that material to that
             //pattern otherwise just returns that pattern as is.
-            
             let newPatternArr = state.patterns.map(p => patternFunc(p)) //iterating over each pattern, using the function to find just the pattern to be altered
             return {
                 ...state,
                 patterns: [newPatternArr],
                 loading: false
+                
             }
         
         default:

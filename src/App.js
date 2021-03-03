@@ -26,7 +26,7 @@ class App extends React.Component {
           <Route exact path='/patterns/new' component={PatternForm} />
           <Route exact path='/patterns/:id' component={PatternCard} />
           <Route exact path='/patterns' component={PatternsContainer} /> 
-          <Route exact path='patterns/:id/materials' component={MaterialsContainer} /> 
+          <Route exact path='/patterns/:id/materials' component={MaterialsContainer} /> 
           <Route exact path='/' component={Home} />
         </Switch>
       </div>

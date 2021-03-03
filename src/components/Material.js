@@ -2,11 +2,15 @@ import React from 'react'
 // import PatternsContainer from './container/PatternsContainer'
 
 const Material = props => {
-    // const name = props.name
+    // debugger
+   console.log(props)
+   
+
+   
     return (
+        
         <div>
-            <ul>{props.name}</ul>
-            <li>{props.description}</li>
+            {/* <ul>{props.name}</ul> */}
         </div>
     )
 }
